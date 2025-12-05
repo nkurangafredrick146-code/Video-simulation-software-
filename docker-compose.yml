@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  scene_env:
+    build: ./scene_env
+    container_name: frextech_scene
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./scene_env:/app
+    command: python app.py
+
+  quantum_env:
+    build: ./quantum_env
+    container_name: frextech_quantum
+    ports:
+      - "5002:5000"
+    volumes:
+      - ./quantum_env:/app
+    command: python app.py
+
+  ml_pipeline:
+    build: ./ml_pipeline
+    container_name: frextech_ml
+    ports:
+      - "5003:5000"
+    volumes:
+      - ./ml_pipeline:/app
+    command: python app.py

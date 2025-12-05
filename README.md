@@ -195,3 +195,5 @@ For support and questions:
 Video Simulation Software - Where Physics Meets Imagination 🎇
 
 ```# Video-simulation-software-
+
+![PyPI version](https://img.shields.io/pypi/v/frextech-simulation)

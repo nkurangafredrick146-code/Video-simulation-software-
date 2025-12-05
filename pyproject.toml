@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "frextech_simulation"
+version = "0.1.1"
+description = "Modular simulation engine for FrexTech's quantum, scene, and ML environments."
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Nkuranga", email = "your@email.com"}]
+keywords = ["simulation", "frextech", "quantum", "scene", "ml", "engine"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Developers",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
