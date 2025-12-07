@@ -1,0 +1,15 @@
+site_name: FrexTech Simulation
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Getting started: getting-started.md
+  - Architecture: architecture.md
+  - Modules:
+    - Physics: modules/physics.md
+    - Rendering: modules/rendering.md
+    - ML: modules/ml.md
+    - Quantum: modules/quantum.md
+  - Services: services.md
+  - Usage: usage.md
+repo_url: https://github.com/nkurangafredrick146-code/Video-simulation-softwaregit add docs mkdocs.yml .github/workflows/publish-docs.yml
