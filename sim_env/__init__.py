@@ -3,64 +3,33 @@ Video Simulation Software - sim_env module
 Complete simulation environment with physics, rendering, ML, and quantum capabilities.
 """
 
-# Core components
-from .scene import Scene
-from .main import EnhancedVideoSimulationSoftware
+"""Lightweight sim_env package initializer.
 
-# Physics
-from .Physics_simulation_module import (
-    PhysicsEngine,
-    Particle,
-    PhysicsSettings,
-    RigidBody,
-    Constraint
-)
+This package avoids importing heavy subsystems at import-time. Use the `*_api` wrappers
+or import modules directly when you need full functionality.
+"""
 
-# Rendering
-from .Rendering_engine import (
-    Renderer,
-    Camera,
-    Material,
-    Shader
-)
-
-# Machine Learning
-from .ml_pipeline import MLPipeline
-from .neural_Physics import NeuralPhysicsEngine
-from .NeRF_Integration import NERFRenderer
-
-# Quantum
-from .quantum_computing_Hybrid import QuantumCircuit
-from .Quantum_Physics_simulations import QuantumSystem
-
-# Fluid Dynamics
-from .fluid_dynamics import FluidSimulation
-
-# GUI and utilities
-from .realtime_gui import RealtimeGUI
-from .Interactive_input_System import InputSystem
-from .Export_Options import DataExporter
+from importlib import import_module
 
 __version__ = "0.1.0"
+
+# Expose lightweight helpers and APIs
+from .core_types import Vec3, ParticleSpec, SimulationConfig
+from .physics_api import is_available as physics_available, create_engine as create_physics_engine
+from .rendering_api import is_available as rendering_available, create_renderer
+from .ml_api import is_available as ml_available, create_pipeline
+from .quantum_api import is_available as quantum_available, create_circuit
+
 __all__ = [
-    "Scene",
-    "EnhancedVideoSimulationSoftware",
-    "PhysicsEngine",
-    "Particle",
-    "PhysicsSettings",
-    "RigidBody",
-    "Constraint",
-    "Renderer",
-    "Camera",
-    "Material",
-    "Shader",
-    "MLPipeline",
-    "NeuralPhysicsEngine",
-    "NERFRenderer",
-    "QuantumCircuit",
-    "QuantumSystem",
-    "FluidSimulation",
-    "RealtimeGUI",
-    "InputSystem",
-    "DataExporter",
+    "Vec3",
+    "ParticleSpec",
+    "SimulationConfig",
+    "physics_available",
+    "create_physics_engine",
+    "rendering_available",
+    "create_renderer",
+    "ml_available",
+    "create_pipeline",
+    "quantum_available",
+    "create_circuit",
 ]
